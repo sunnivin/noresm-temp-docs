@@ -1,5 +1,7 @@
 
-# What if I need to change something? 
+# FAQ
+
+This page contains the most common questions our users encounter.
 
 
 ## Update 
@@ -16,9 +18,9 @@ To delete **all** Docker containers, images, and other files, also ones in use, 
     
 Docker desktop can be uninstalled like any other program, e.g. via you pc's settings. 
 
-***************************************************
+## Bug or unanswered question?
 
-***Please help us by reporting errors and questions on our [issues page](https://github.com/NorESMhub/noresm-land-sites-platform/issues/new).***
+Please help us by reporting errors and questions on our [issues page](https://github.com/NorESMhub/noresm-land-sites-platform/issues/new).
 
 ***************************************************
 

@@ -3,6 +3,43 @@
 
 To use the NorESM land sites platform, you need [Git](https://git-scm.com/downloads "click the pc screen button if you are on Windows"), [Docker desktop](https://www.docker.com/products/docker-desktop), and about 15-20GB of available disk space before you can clone the [repository](https://github.com/NorESMhub/noresm-land-sites-platform "repository for the NorESM Land Sites platform") (= download the code) and start working in the containers. You may need administrator rights to your computer to install Git and Docker. If you don't want to use Git, you can try to download and unpack the repository manually instead by clicking the `code` button and `download zip`. Note that [some Mac computers may be difficult to run on](https://github.com/NorESMhub/noresm-land-sites-platform/issues/162), but otherwise any operating system that can run Docker should work. Step by step (with steps in brackets only sometimes necessary, depending on your computer):
 
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+
+=== "Unix"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+
+=== "Windows"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+
+
+
 1. [Create a GitHub account](https://github.com/) (optional, but generally recommended to be able to open issues, etc.)
 2. Install Git on your machine. For Windows: https://gitforwindows.org/, other: https://github.com/git-guides/install-git
 3. Install [Docker desktop](https://docs.docker.com/get-docker), might require restart

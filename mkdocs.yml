@@ -1,5 +1,6 @@
 site_name: NorESM Land Sites Platform technical documentation
 site_url: https://sunnivin.github.io/noresm-land-sites-platform/
+use_directory_urls : true
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
