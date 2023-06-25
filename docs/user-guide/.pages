@@ -1,0 +1,6 @@
+nav: 
+    - User guide : user-guide.md
+    - Quick start : quick-start.md
+    - Installation : installation.md
+    - Modelling best practices: modelling-best-practices.md
+    - Citation : citation.md
