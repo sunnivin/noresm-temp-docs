@@ -18,7 +18,6 @@ This with bring up a mkdocs server on http://localhost:8000/.
 
 **NB** when you work locally with `mkdocs` you might have to clean you cash memory of the browser, or try to see your new changes in *incognito mode* to be sure. 
 
-
 ## Build docker image locally
 
 Local build of the docker image 
