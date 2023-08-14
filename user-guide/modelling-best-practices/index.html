@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://sunnivin.github.io/noresm-land-sites-platform/user-guide/modelling-best-practices/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Modelling best practices - NorESM Land Sites Platform technical documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Modelling best practices";
+        var mkdocs_page_input_path = "user-guide/modelling-best-practices.md";
+        var mkdocs_page_url = "/noresm-land-sites-platform/user-guide/modelling-best-practices/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> NorESM Land Sites Platform technical documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Main page</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">User guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first-time/">First time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quick-start/">Quick start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../advanced-customisation/">Advanced customization</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Modelling best practices</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-customisation">Advanced customisation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reproducibility">Reproducibility</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reproducibility_1">Reproducibility</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../citation/">Citation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Episode name</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../episode/purpose/">Purpose</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../episode/set-up/">Set-up</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Lectures</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../episode/lectures/image-examples/">Image examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../episode/lectures/code-examples/">Code examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../episode/lectures/icons/">Icons</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../episode/lectures/hands-on/">Hands-on</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">NorESM Land Sites Platform technical documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>User guide &raquo;</li>
+      <li>Modelling best practices</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="model-performance-and-best-practices">Model performance and best practices</h1>
+<p>While the LSP makes is easy to perform a simulation, there are many pitfalls to consider when setting up model experiments and interpreting the results. To get realistic results from simulations, three elements must be correct: model structure, model parameterization, and the external forcing data. Getting all three right is difficult even for experienced modellers, but you can get far by being curious and careful in your interpretations. Ask yourself, what can the model actually do (which processes are included in the model structure)? What do the current parameters represent (e.g. for default Plant Functional Types, mortality rates, growth allometry)? Is the forcing data realistic for my site? </p>
+<p>If you want to improve you model experiment, it's vital to consider your purpose. For example, do you want the output to be as similar as possible to an observed data set? If so, you might tune model parameters and adjust your input (forcing) data. The risk is that you "get the right result for the wrong reason", but that might be acceptable depending on your purpose and if you don't extrapolate. Alternatively, one might risk getting completely unrealistic model output even when all parameters and forcing data are correct. The model may lack an important process that produces a result in real life. Model calibration, validation and tuning should therefore be done with great care and according to your purpose of modelling. </p>
+<p>To learn more about the models and land surface modelling, check out our <a href="https://noresmhub.github.io/noresm-land-sites-platform/resources/">external resources page</a>. Understanding what you don't know is the first step!</p>
+<h2 id="advanced-customisation">Advanced customisation</h2>
+<p>If you need customisation of data, model code, or case setup beyond what is possible through the graphical user interface and JupyterLab, you may access the containers or API directly. You can also <a href="https://noresmhub.github.io/noresm-land-sites-platform/documentation/#running-the-noresm-lsp-remotely">use the platform remotely, e.g. via SSH tunnelling</a>. </p>
+<p>If you have (or create) an <code>.env</code> file in the project root with <code>HOST_USER</code> set in it, use this:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec -u &lt;host_user_value&gt; api bash
+</code></pre></div>
+<p>Otherwise, use this:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec api bash
+</code></pre></div>
+<p>This will open a terminal in /ctsm-api. The model is in /ctsm-api/resources/model. Cases created with the api go in /ctsm-api/resources/cases, and their data in /ctsm-api/resources/data/<case-id>. The build, run, and archive folders are put inside the case folder. Shared data goes in /ctsm-api/resources/data/shared.</p>
+<h2 id="reproducibility">Reproducibility</h2>
+<p>To make your simulations reproducible by others, e.g. for a thesis or scientific paper, <em>note down the version of the NorESM-LSP</em> and save these three directories that have been created under <code>resources/</code> in your working directory (e.g. C:/Users/yourusername/noresm-land-sites-platform/resources):</p>
+<ul>
+<li>the case folder, i.e. ´resources/cases/casename´</li>
+<li>the case input data, i.e. ´resources/data/casename´</li>
+<li>code modifications in overwrites, i.e. ´resources/overwrites´</li>
+</ul>
+<p>You could also simply save the whole 'resources' folder (and get some redundant files).</p>
+<p>To recreate an old simulation, the LSP might need to be reinstalled. Old case folders can of course be copied into new versions of the LSP, but if there are changes to e.g. python libraries, model code or other software we depend on, there might be errors or slight differences in the output if the case is re-run. To install a specific version, go to <a href="https://github.com/NorESMhub/noresm-land-sites-platform">GitHub</a>, find the correct version tag/release tag, and clone or download the code from that version. Once the correct version of the repository is in place, copy and pase in the three folders listed above. Make sure the folder structure is the same. Then, bring up the containers again with <code>docker-compose up</code> and <em>voilà</em>! </p>
+<h2 id="reproducibility_1">Reproducibility</h2>
+<p>To make your simulations reproducible by others, e.g. for a thesis or scientific paper, <em>note down the version of the NorESM-LSP</em> and save these three directories that have been created under <code>resources/</code> in your working directory (e.g. C:/Users/yourusername/noresm-land-sites-platform/resources):</p>
+<ul>
+<li>the case folder, i.e. ´resources/cases/casename´</li>
+<li>the case input data, i.e. ´resources/data/casename´</li>
+<li>code modifications in overwrites, i.e. ´resources/overwrites´</li>
+</ul>
+<p>You could also simply save the whole 'resources' folder (and get some redundant files).</p>
+<p>To recreate an old simulation, the LSP might need to be reinstalled. Old case folders can of course be copied into new versions of the LSP, but if there are changes to e.g. python libraries, model code or other software we depend on, there might be errors or slight differences in the output if the case is re-run. To install a specific version, go to <a href="https://github.com/NorESMhub/noresm-land-sites-platform">GitHub</a>, find the correct version tag/release tag, and clone or download the code from that version. Once the correct version of the repository is in place, copy and pase in the three folders listed above. Make sure the folder structure is the same. Then, bring up the containers again with <code>docker-compose up</code> and <em>voilà</em>! </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../advanced-customisation/" class="btn btn-neutral float-left" title="Advanced customization"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../citation/" class="btn btn-neutral float-right" title="Citation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2022- The NorESM Land Sites Platform Team</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../advanced-customisation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../citation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/map.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
