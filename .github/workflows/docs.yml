@@ -34,5 +34,6 @@ jobs:
 
       - name: Build and deploy docs
         run: |
-          git config --global --add safe.directory /__w/noresm-land-sites-platform/noresm-land-sites-platform
+          # git config --global --add safe.directory /__w/noresm-land-sites-platform/noresm-land-sites-platform
+          git config --global --add safe.directory /__w/noresm-temp-docs/noresm-temp-docs
           poetry run mkdocs gh-deploy --force
