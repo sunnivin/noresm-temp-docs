@@ -6,7 +6,7 @@
 
 The NorESM-LSP software allows anyone to run simple, offline, single-site simulations with the demographic dynamic global vegetation model [NorESM](https://github.com/NorESMhub/NorESM)-[CLM](https://github.com/ESCOMP/CTSM)-[FATES](https://github.com/NGEET/fates). In this documentation you will find:
 
-- [User guide](https://noresmhub.github.io/noresm-land-sites-platform/user_guide)
+- [User guide](user-guide/)
 - [Technical documentation](https://noresmhub.github.io/noresm-land-sites-platform/documentation)
 - [Sites](https://noresmhub.github.io/noresm-land-sites-platform/land-sites)
 - [About us](https://noresmhub.github.io/noresm-land-sites-platform/about)
@@ -20,11 +20,11 @@ Our aim is to improve access to this process-based modelling framework. The soft
 2. By beginner modelers, e.g. post-graduate students or scientists who are new to CLM-FATES modelling, to set up scientific model experiments under the supervision of or in collaboration with more experienced modelers. 
 3. By experienced modelers without access to HPC clusters with the models installed, who benefit from the containerisation of the model.
 
-
 <figure markdown>
 ![Forest work](img/DALL-E-2022-forest-work.png)
 ![Meadow work](img/DALL-E-2022-meadow-work.png)
-  <figcaption>Model experiments with CLM-FATES simulate potential vegetation. What ecosystem would appear where you are right now, in the absence of human land use?</figcaption>
+  <figcaption>
+  Model experiments with CLM-FATES simulate potential vegetation. What ecosystem would appear where you are right now, in the absence of human land use?
+  </figcaption>
 </figure>
-
 

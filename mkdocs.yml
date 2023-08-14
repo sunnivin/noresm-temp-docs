@@ -20,6 +20,8 @@ plugins:
     - search
     - awesome-pages
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - footnotes
   - admonition
   - mdx_math
@@ -27,8 +29,6 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true 
-  - attr_list
-  - md_in_html
   - pymdownx.superfences
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji 

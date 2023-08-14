@@ -1,41 +1,46 @@
-# User guide
+# First time set-up 
 
-This is the user guide for running single-site simulations with the [NorESM LandSites Platform](https://noresmhub.github.io/noresm-land-sites-platform/). It guides you through [installing the software](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#0-prerequisites-first-time-setup) and how to [use the Graphical User Interface (GUI)](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#2-inside-gui-set-simulation-settings) and the [analysis tools in JupyterLab](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#4-look-at-your-output). More information about the LSP and the model framework is available in our [technical documentation](https://noresmhub.github.io/noresm-land-sites-platform/documentation/). If you want to learn more about the FATES, CLM, and NorESM models, we have collected some useful links to tutorials and documentation in the [external resources page](https://noresmhub.github.io/noresm-land-sites-platform/resources/).
 
-!!! warning 
-
-    Note that the default values and input data we provide are sufficient for educational uses, but should not be considered high-quality model experiments. If your goal is to set up high-quality model experiments, you might want to modify or provide your own input data, set up long spin-up simulations to reach a steady-state, and think about model calibration and validation. While the LSP makes it easier to model, you the user are responsible for following good ethical and scientific practices according to your purposes. Note also that we (the LSP development team) are not responsible for the models themselves, and that data downloaded from external sources may have terms and conditions of use. Make sure to read and follow the terms and properly credit the relevant models, software, and data if you plan to publish your model experiment! 
-
-***********************************************
-
-## TL;DR quick start 🏃‍♀️🏃‍♂️
-
-If you have already completed [first-time setup](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#0-prerequisites-first-time-setup) and know what you are doing, here is the extremely quick user guide. In a terminal where you have the repository: 
-    
-```
-cd noresm-land-sites-platform
-docker-compose up
-```
-
-Open the GUI: [localhost:8080](http://localhost:8080) and push buttons, and access jypyter notebooks on [localhost:8888](http://localhost:8888) and Panoply on [localhost:5800](http://localhost:5800) 🎉
-
-***********************************************
-
-## An overview of the LSP software
-
-![User interfaces and simplified software architecture](img/user-interfaces-and-architecture-Page-1.jpg)
-
-*Illustration of the user interfaces and a simplified software architecture. From your browser, you can access this user guide and our technical documentation, as well as the GUI, JupyterLab and Panoply servers once the containers are up and running (see [0. Prerequisites](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#0-prerequisites-first-time-setup) and [1. Starting the containers](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#1-start-the-container) below). Containers provide virtual computing environments where we can run the model and the software can communicate with each other. Repositories (versioned file structures) with the code for the NorESM-LSP and models are stored on GitHub. Input data is downloaded to the containers from external storage, and model output is stored locally in the user's copy of the repository. See the [Software Architecture description in the technical documentation](https://noresmhub.github.io/noresm-land-sites-platform/documentation/#software-architecture) for more details.*
-
-## Step by step guide for using the platform
-
-> Check out our [glossary of technical terms](https://noresmhub.github.io/noresm-land-sites-platform/documentation/#glossary-of-technical-terms).
-
-> If you want to use the LSP on a remote computer, see the [SSH tunnel instructions](https://noresmhub.github.io/noresm-land-sites-platform/documentation/#ssh-tunneling-with-example-for-nrec).
-
-### 0. Prerequisites (first time setup) 🌱
+## Prerequisites (first time setup) 🌱
 
 To use the NorESM land sites platform, you need [Git](https://git-scm.com/downloads "click the pc screen button if you are on Windows"), [Docker desktop](https://www.docker.com/products/docker-desktop), and about 15-20GB of available disk space before you can clone the [repository](https://github.com/NorESMhub/noresm-land-sites-platform "repository for the NorESM Land Sites platform") (= download the code) and start working in the containers. You may need administrator rights to your computer to install Git and Docker. If you don't want to use Git, you can try to download and unpack the repository manually instead by clicking the `code` button and `download zip`. Note that [some Mac computers may be difficult to run on](https://github.com/NorESMhub/noresm-land-sites-platform/issues/162), but otherwise any operating system that can run Docker should work. Step by step (with steps in brackets only sometimes necessary, depending on your computer):
+
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+
+=== "Unix"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+
+=== "Windows"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+
+
 
 1. [Create a GitHub account](https://github.com/) (optional, but generally recommended to be able to open issues, etc.)
 2. Install Git on your machine. For Windows: https://gitforwindows.org/, other: https://github.com/git-guides/install-git
@@ -53,6 +58,14 @@ git clone https://github.com/NorESMhub/noresm-land-sites-platform.git --config c
 This will download (= clone) the repository (= folder structure of files with version history) to your working directory. You can now see the folder and files in your file explorer.
 
 Once Git, Docker Desktop and the repository are in place, you don't have to do this again. 
+
+
+
+## Step by step guide for using the platform
+
+> Check out our [glossary of technical terms](https://noresmhub.github.io/noresm-land-sites-platform/documentation/#glossary-of-technical-terms).
+
+> If you want to use the LSP on a remote computer, see the [SSH tunnel instructions](https://noresmhub.github.io/noresm-land-sites-platform/documentation/#ssh-tunneling-with-example-for-nrec).
 
 ### 1. Start the container 🧰
 
@@ -185,82 +198,3 @@ There are  many other ways to analyse the data, and much more model output avail
 NB! The container will continue to run unless you stop it. When you are finished with simulations and output processing and downloading things you might need offline, go back to your terminal and press `Ctrl+c`. If you closed the terminal window, you can open a new one, go to the repository (`cd noresm-land-sites-platform/`) and type in `docker-compose down`. Alternatively, open Docker desktop, find the containers tab, and shut them down them with the stop button.
 
 ***************************************************
-
-## Model performance and best practices
-
-While the LSP makes is easy to perform a simulation, there are many pitfalls to consider when setting up model experiments and interpreting the results. To get realistic results from simulations, three elements must be correct: model structure, model parameterization, and the external forcing data. Getting all three right is difficult even for experienced modellers, but you can get far by being curious and careful in your interpretations. Ask yourself, what can the model actually do (which processes are included in the model structure)? What do the current parameters represent (e.g. for default Plant Functional Types, mortality rates, growth allometry)? Is the forcing data realistic for my site? 
-
-If you want to improve you model experiment, it's vital to consider your purpose. For example, do you want the output to be as similar as possible to an observed data set? If so, you might tune model parameters and adjust your input (forcing) data. The risk is that you "get the right result for the wrong reason", but that might be acceptable depending on your purpose and if you don't extrapolate. Alternatively, one might risk getting completely unrealistic model output even when all parameters and forcing data are correct. The model may lack an important process that produces a result in real life. Model calibration, validation and tuning should therefore be done with great care and according to your purpose of modelling. 
-
-To learn more about the models and land surface modelling, check out our [external resources page](https://noresmhub.github.io/noresm-land-sites-platform/resources/). Understanding what you don't know is the first step!
-
-## Advanced customisation
-
-If you need customisation of data, model code, or case setup beyond what is possible through the graphical user interface and JupyterLab, you may access the containers or API directly. You can also [use the platform remotely, e.g. via SSH tunnelling](https://noresmhub.github.io/noresm-land-sites-platform/documentation/#running-the-noresm-lsp-remotely). 
-
-
-If you have (or create) an `.env` file in the project root with `HOST_USER` set in it, use this:
-
-```
-docker-compose exec -u <host_user_value> api bash
-```
-
-Otherwise, use this:
-
-```
-docker-compose exec api bash
-```
-
-This will open a terminal in /ctsm-api. The model is in /ctsm-api/resources/model. Cases created with the api go in /ctsm-api/resources/cases, and their data in /ctsm-api/resources/data/<case-id>. The build, run, and archive folders are put inside the case folder. Shared data goes in /ctsm-api/resources/data/shared.
-
-## Reproducibility
-    
-To make your simulations reproducible by others, e.g. for a thesis or scientific paper, *note down the version of the NorESM-LSP* and save these three directories that have been created under `resources/` in your working directory (e.g. C:/Users/yourusername/noresm-land-sites-platform/resources):
-
-- the case folder, i.e. ´resources/cases/casename´
-- the case input data, i.e. ´resources/data/casename´
-- code modifications in overwrites, i.e. ´resources/overwrites´
-
-You could also simply save the whole 'resources' folder (and get some redundant files).
-
-To recreate an old simulation, the LSP might need to be reinstalled. Old case folders can of course be copied into new versions of the LSP, but if there are changes to e.g. python libraries, model code or other software we depend on, there might be errors or slight differences in the output if the case is re-run. To install a specific version, go to [GitHub](https://github.com/NorESMhub/noresm-land-sites-platform), find the correct version tag/release tag, and clone or download the code from that version. Once the correct version of the repository is in place, copy and pase in the three folders listed above. Make sure the folder structure is the same. Then, bring up the containers again with `docker-compose up` and *voilà*! 
-
-## When and how to cite the NorESM-LSP, models, and data
-    
-If you end up publishing your model experiments, e.g. in a thesis or scientific paper, you need to consider citations, acknowledgements, and authorship invitations carefully.
-
-To cite the NorESM-LSP software, see the [Contributing](https://noresmhub.github.io/noresm-land-sites-platform/contributing/) and [About](https://noresmhub.github.io/noresm-land-sites-platform/about/). 
-
-When you publish model experiments, you also need to properly cite and acknowledge the model framework: See the licences of [NorESM](https://github.com/NorESMhub/NorESM/blob/master/LICENSE.txt), [CLM](https://github.com/ESCOMP/CTSM/blob/master/LICENSE), [FATES](https://github.com/NGEET/fates/blob/master/LICENSE.txt). In the Acknowledgements section, it is common practice to add funding information of the models that you use (e.g. the U.S. National Science Foundation for CLM, NGEE-Tropics for FATES). The main publications for each model should also be cited in the main text.
-
-If you use observational data, e.g. from the Vestland Climate Grid sites or another integrated site, make sure to look at the licences, rights and conditions attached to those data! 
-    
-Following international standards for research ethics, authorship invitations should be given based on "substantial contributions to conception and design, acquisition of data, or analysis and interpretation of data", among other things. 
-
-***************************************************
-
-## Troubleshooting
-
-Please help us by reporting errors and questions on our [issues page](https://github.com/NorESMhub/noresm-land-sites-platform/issues/). Things you can try yourself include "switching it off and on again" by stopping, deleting, and reinstalling everything carefully. See instructions to uninstall below, and carefully follow steps 6 and 7 from the [setup guide](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#0-prerequisites-first-time-setup) before you bring the containers up again with `docker-compose up`.
-
-## Updating and uninstalling
-
-To install updates, download the new version of the code and container images by typing `git pull` followed by `docker-compose pull` into a terminal from your local clone of the repository. 
-    
-To uninstall, open a terminal in your working directory and enter your local clone of the repository (remember `ls`= list files, `cd`=change directory). Right-clicking in your working directory file explorer should give you options to open Git Bash or another terminal. If the container (or another process) is running in your terminal, you can stop it with `Ctrl+c`, or with `docker-compose down` if you see `.../noresm-land-sites-platform$`. 
-    
-To remove the repository, you can type `rm -r noresm-land-sites-platform` in your working directory. If it complains about permissions you may need `sudo` in front, and you can use -rf instead of -r. This might require administrator rights to your computer. NB! If you delete the whole repository like this, your existing cases and output data will also be deleted.
-
-To delete **all** Docker containers, images, and other files, also ones in use, use the command `docker system prune -a`. NB! If you do this, you will need to download all the files again if you want to use the LSP again. It is also possible to delete everything manually in Docker desktop (check containers, images, and volumes tabs), and to delete the repository manually from your working directory.
-    
-Docker desktop can be uninstalled like any other program, e.g. via you pc's settings. 
-
-***************************************************
-
-***Please help us by reporting errors and questions on our [issues page](https://github.com/NorESMhub/noresm-land-sites-platform/issues/new).***
-
-***************************************************
-
-[![NorESM](img/NORESM-logo.png "the Norwegian Earth System Model")](https://www.noresm.org/)
-[![EMERALD](img/Emerald_darktext_whiteBG_small.png "EMERALD project")](https://www.mn.uio.no/geo/english/research/projects/emerald/)
-[![LATICE](img/UiO_LATICE_logo_black_small.png "Land-ATmosphere Interactions in Cold Environments research group")](https://www.mn.uio.no/geo/english/research/groups/latice/)

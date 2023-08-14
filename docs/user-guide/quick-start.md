@@ -1,5 +1,4 @@
-
-## TL;DR quick start 🏃‍♀️🏃‍♂️
+# TL;DR quick start 🏃‍♀️🏃‍♂️
 
 If you have already completed [first-time setup](https://noresmhub.github.io/noresm-land-sites-platform/user_guide/#0-prerequisites-first-time-setup) and know what you are doing, here is the extremely quick user guide. In a terminal where you have the repository: 
     

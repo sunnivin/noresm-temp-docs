@@ -1,6 +1,8 @@
 nav: 
-    - User guide : user-guide.md
+    - User guide : index.md
+    - First time  : first-time.md
     - Quick start : quick-start.md
-    - Installation : installation
+    - Advanced customization: advanced-customisation.md
     - Modelling best practices: modelling-best-practices.md
     - Citation : citation.md
+    - FAQ : faq.md

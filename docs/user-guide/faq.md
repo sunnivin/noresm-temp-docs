@@ -1,4 +1,3 @@
-
 # FAQ
 
 This page contains the most common questions our users encounter.
